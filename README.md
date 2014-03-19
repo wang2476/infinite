@@ -8,53 +8,6 @@ Overview
 =============
 This theme supported all post type and was created with Twitter Bootstrap as its base, so it has a fluid layout that will auto scale down accordingly to the device width a.k.a fully responsive in any side, neither the desktop view nor the mobile view (mobile, smartphone and tablet).
 
-CSS
-=============
-This theme based on the power of HTML5 and CSS3. It uses 3 main css, which is font awesome css, bootstrap css, and my personal css. All of them was merged and minified into one single file to help in improving the web page's loading speed.
-
-JavaScript
-=============
-This theme was built with several javascript files support, most of them are open source and based on the power of jQuery.
-
-1. <b>jQuery.</b><br/>
-jQuery is a Javascript library that greatly reduces the amount of code that you must write.
-
-2. <b>Bootstrap</b><br/>
-a plugin dependencies for bootstrap framework.
-
-3. <b>Masonry</b><br/>
-Masonry is a dynamic grid layout plugin for jQuery. Whereas floating arranges elements horizontally then vertically, Masonry arranges elements vertically, positioning each element in the next open spot in the grid.
-
-4. <b>Infinitescroll</b><br/>
-Infinitescroll is a dynamic autopagersize, unpaginate, endless pages plugin for jQuery. This plugin aim to progressively enhance your page display.
-
-5. <b>Pxu Photoset Extended</b><br/>
-This plugin was created by Pixel Union with the main purpose to override the default tumblr photoset layout.
-
-6. <b>Colorbox</b><br/>
-Colorbox is a lightweight customizable lightbox plugin for jQuery.
-
-7. <b>ScrollUp</b><br/>
-ScrollUp is a lightweight jQuery plugin to create a customizable Scroll to top feature that will work with any website, with ease.
-
-8. <b>Responsive Slides</b><br/>
-Responsive Slides is a tiny jQuery plugin that automatically creates responsive slider using images inside a container.
-
-9. <b>Streampad</b><br/>
-Streampad is a plugin to control the Streampad player via Javascript. No jQuery required.
-
-10. <b>Instafeed</b><br/>
-Instafeed is a dead-simple way to add Instagram photos to any website. No jQuery required.
-
-11. <b>Backstretch</b><br/>
-Backstretch is a simple jQuery plugin that allows you to add a dynamically-resized, slideshow-capable background image to any page or element.
-
-All of them was merged, minified and packed into one single Packer file to reduce the file size and help in improving the web page's loading speed.
-
-Images
-=============
-This theme was built with minimal design, so it really doesn't use much images at all. All icon are taken from font awesome.
-
 Features
 =============
 
