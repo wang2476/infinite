@@ -61,7 +61,9 @@ j. <a target="_blank"  href="//github.com/markgoodyear/scrollup">Scrollup</a> by
 
 k. <a target="_blank"  href="//github.com/viljamis/ResponsiveSlides.js">ResponsiveSlides</a> by Viljamis
 
-l. <a target="_blank"  href="//www.streampad.com/javascript-api">Streampad</a> by Streampad
+l. <a target="_blank"  href="http://manos.malihu.gr/style-my-tooltips-jquery-plugin/">Style my Tooltips</a> by Manos Malihu
+
+m. <a target="_blank"  href="//www.streampad.com/javascript-api">Streampad</a> by Streampad
 
 Any Questions?
 =============
