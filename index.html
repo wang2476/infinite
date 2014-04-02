@@ -23,8 +23,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width" />
-    <title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}{block:SearchPage} &mdash; {SearchQuery}{/block:SearchPage}
-    </title>
+    <title>{Title}{block:PostSummary} &#124; {PostSummary}{/block:PostSummary}{block:SearchPage} &#124; Search results for {SearchQuery}{/block:SearchPage}</title>
     <meta name="description" content="{block:Description}{MetaDescription}{/block:Description}" />
     <meta name="robots" content="index, follow" />
     <link rel="icon" href="{Favicon}" />
@@ -313,7 +312,7 @@
       }
     </style>
     <![endif]-->
-    <meta property="og:title" content="{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}{block:SearchPage} &mdash; Search results for {SearchQuery}{/block:SearchPage}" />
+    <meta property="og:title" content="{Title}{block:PostSummary} &#124; {PostSummary}{/block:PostSummary}{block:SearchPage} &#124; Search results for {SearchQuery}{/block:SearchPage}" />
     <meta property="og:description" content="{block:IndexPage}{block:Description}{MetaDescription}{/block:Description}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}" />
     <meta property="og:type" content="{block:IndexPage}blog{/block:IndexPage}{block:PermalinkPage}{block:Posts}{PostType}{/block:Posts}{/block:PermalinkPage}" />
     <meta property="og:url" content="{block:IndexPage}{BlogURL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
@@ -624,7 +623,7 @@
 						</li>
 						 {/block:IfPinterestID}{block:IfGithubID}
 						<li>
-						<a target="_blank" href="//{text:Github ID}.github.io/infinitegrid" title="{lang:Follow me} on Github">
+						<a target="_blank" href="//github.com/{text:Github ID}" title="{lang:Follow me} on Github">
 						<i class="icon-github-alt">
 						</i>
 						Github </a>
