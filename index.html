@@ -120,6 +120,7 @@
     <meta name="if:Show Following" content="0" />
     <meta name="if:Show Photo Slideshow" content="0" />
     <meta name="if:Show About" content="0" />
+    <meta name="text:Copyright Name" content="" />
     <meta name="text:Facebook ID" content="" />
     <meta name="text:Github ID" content="" />
     <meta name="text:Twitter ID" content="" />
@@ -1273,7 +1274,7 @@
       var image3 = '{block:IfHeader3Image}{image:Header3}{/block:IfHeader3Image}{block:IfNotHeader3Image}//static.tumblr.com/8e82161c0841d1abca12df37b4a3e72a/tekiskr/Uiomwiiio/tumblr_static_c.jpg{/block:IfNotHeader3Image}';{/block:ifUseHeaderSlide}{/block:ifShowHeader}{block:SearchPage}
       var c = true;{/block:SearchPage}
       var spaces = '{select:Photoset Padding}';{block:IfShowMusicPlayer}
-      var copyrights = 'Copyright  © {CopyrightYears} {name}. All rights reserved.';{/block:IfShowMusicPlayer}{block:IfNotUseMinimalNav}{block:IfTwitterID}{block:IfShowTweets}
+      var copyrights = 'Copyright  © {CopyrightYears} {block:IfNotCopyrightName}{name}{block:IfNotCopyrightName}{block:IfCopyrightName}{text:Copyright Name}{/block:IfCopyrightName}. All rights reserved.';{/block:IfShowMusicPlayer}{block:IfNotUseMinimalNav}{block:IfTwitterID}{block:IfShowTweets}
       var twitterID = "{text:Twitter ID}";{/block:IfShowTweets}{/block:IfTwitterID}{block:IfInstagramAccessToken}{block:IfShowInstagram}
       var userId = '{text:Instagram User ID}';
       var accessToken = '{text:Instagram Access Token}';
