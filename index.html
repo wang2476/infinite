@@ -11,7 +11,7 @@
                                              
 =======================================================================
    Infinite Grid
-   Build: Apr 1st, 2014
+   Build: Apr 6th, 2014
    By: Dinata Daniel
 =======================================================================
 -->
@@ -23,26 +23,27 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width" />
-    <title>{Title}{block:PostSummary} &#124; {PostSummary}{/block:PostSummary}{block:SearchPage} &#124; Search results for {SearchQuery}{/block:SearchPage}</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>{Title}{block:IndexPage} &#124; {lang:Home}{/block:IndexPage}{block:PostSummary} &#124; {PostSummary}{/block:PostSummary}{block:SearchPage} &#124; {SearchQuery}{/block:SearchPage}</title>
     <meta name="description" content="{block:Description}{MetaDescription}{/block:Description}" />
     <meta name="robots" content="index, follow" />
     <link rel="icon" href="{Favicon}" />
     <link rel="apple-touch-icon" href="{PortraitURL-128}" />
     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
     <link rel="canonical" href="{block:IndexPage}{BlogURL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
-    <link rel="stylesheet" href="//static.tumblr.com/tekiskr/4LDn3eb5q/style.min.css" />
+    <link rel="stylesheet" href="//static.tumblr.com/tekiskr/NKVn3inqo/style.min.css" />{block:IfNotUseTitleImage}
+    <link href='//fonts.googleapis.com/css?family={select:Font Title}|{select:Font Desc}' rel='stylesheet' type='text/css'>{/block:IfNotUseTitleImage}
     <!--[if IE 7]>
-      <link rel="stylesheet" href="//static.tumblr.com/tekiskr/uItn3dhk0/font-awesome-ie7.min.css">
+    <link rel="stylesheet" href="//static.tumblr.com/tekiskr/5hcn3ihpe/font-awesome-ie7.min.css">
     <![endif]-->{block:Hide}
-    <meta name="font:Body" content="Baskerville" />
-    <meta name="font:Title" content="Courier New" />
-    <meta name="font:Desc" content="Baskerville" />
+    <meta name="color:Header Title" content="#aaa" />
+    <meta name="color:Header Shadow" content="#666" />
     <meta name="color:1st Color" content="#fff" />
     <meta name="color:2nd Color" content="#aaa" />
     <meta name="color:3rd Color" content="#fff" />
     <meta name="color:4th Color" content="#777" />
-    <meta name="color:5th Color" content="#bbb" />
-    <meta name="color:6th Color" content="#ccc" />
+    <meta name="color:5th Color" content="#999" />
+    <meta name="color:6th Color" content="#bbb" />
     <meta name="color:7th Color" content="#aaa" />
     <meta name="color:8th Color" content="#777" />
     <meta name="color:9th Color" content="#777" />
@@ -55,15 +56,54 @@
     <meta name="color:7th Bgcolor" content="#ccc" />
     <meta name="color:8th Bgcolor" content="#ddd" />
     <meta name="color:9th Bgcolor" content="#888" />
+    <meta name="select:Font Title" content="Lobster" title="Lobster" />
+    <meta name="select:Font Title" content="Pacifico" title="Pacifico" />
+    <meta name="select:Font Title" content="Fascinate" title="Fascinate" />
+    <meta name="select:Font Title" content="Plaster" title="Plaster" />
+    <meta name="select:Font Title" content="Kavoon" title="Kavoon" />
+    
+    <meta name="select:Font Title" content="UnifrakturMaguntia" title="Unifraktur Maguntia" />
+    <meta name="select:Font Title" content="Yesteryear" title="Yesteryear" />
+    <meta name="select:Font Title" content="Yellowtail" title="Yellowtail" />
+    <meta name="select:Font Title" content="Devonshire" title="Devonshire" />
+    <meta name="select:Font Title" content="Vibur" title="Vibur" />
+    <meta name="select:Font Body" content="Baskerville,'Times New Roman',Times,serif" title="Baskerville" />
+    <meta name="select:Font Body" content="Verdana,Geneva,Tahoma,sans-serif" title="Verdana" />
+    <meta name="select:Font Body" content="Palatino,'Palatino LT STD','Palatino Linotype','Book Antiqua',Georgia,serif" title="Palatino" />
+    <meta name="select:Font Body" content="'Helvetica Neue',Arial,Helvetica,sans-serif" title="Helvetica Neue" />
+    <meta name="select:Font Body" content="Futura,'Century Gothic',AppleGothic,sans-serif" title="Century Gothic" />
+    <meta name="select:Font Body" content="'Courier New',Courier,monospace" title="Courier New" />
+    <meta name="select:Font Body" content="'Arial Narrow',Arial,'Helvetica Condensed',Helvetica,sans-serif" title="Arial Narrow" />
+    <meta name="select:Font Body" content="'Trebuchet MS','Lucida Grande','Lucida Sans Unicode','Lucida Sans',sans-serif" title="Trebuchet MS" />
+    <meta name="select:Font Body" content="Consolas,monaco,monospace" title="Consolas" />
+    <meta name="select:Font Body" content="'Lucida Sans','Lucida Grande','Lucida Sans Unicode',sans-serif" title="Lucida Sans" />
+    <meta name="select:Font Desc" content="Zeyada" title="Zeyada" />
+    <meta name="select:Font Desc" content="Rochester" title="Rochester" />
+    <meta name="select:Font Desc" content="Montez" title="Montez" />
+    <meta name="select:Font Desc" content="Niconne" title="Niconne" />
+    <meta name="select:Font Desc" content="Parisienne" title="Parisienne" />
+    <meta name="select:Font Desc" content="Allura" title="Allura" />
+    <meta name="select:Font Desc" content="Cookie" title="Cookie" />
+    <meta name="select:Font Desc" content="Vibur" title="Vibur" />
+    <meta name="select:Font Desc" content="Sevillana" title="Sevillana" />
+    <meta name="select:Font Desc" content="Aubrey" title="Aubrey" />
+    <meta name="select:Desc Spacing" content="-8px" Title="8px" />
+    <meta name="select:Desc Spacing" content="-10px" Title="10px" />
+    <meta name="select:Desc Spacing" content="-12px" Title="12px" />
+    <meta name="select:Desc Spacing" content="-14px" Title="14px" />
+    <meta name="select:Desc Spacing" content="-16px" Title="16px" />
     <meta name="if:Use Title Image" content="0" />
-    <meta name="if:Use Bg Image" content="0" />
-    <meta name="if:Use Section Image" content="0" />
+    <meta name="if:Use Bg Image" content="1" />
+    <meta name="if:Use Section Image" content="1" />
     <meta name="if:Use Minimal Nav" content="1" />
     <meta name="if:Use Header Slide" content="0" />
     <meta name="if:Use Dynamic Nav" content="1" />
     <meta name="if:Use Title Slide" content="0" />
     <meta name="if:Use 2 Content Likes" content="1" />
-    <meta name="if:Use Photoset Padding" content="0" />
+    <meta name="select:Photoset Padding" content="1px" Title="Small" />
+    <meta name="select:Photoset Padding" content="3px" Title="Medium" />
+    <meta name="select:Photoset Padding" content="5px" Title="Large" />
+    <meta name="select:Photoset Padding" content="0" Title="No" />
     <meta name="if:White Like Button" content="1" />
     <meta name="if:Show Title And Desc" content="1" />
     <meta name="if:Show Header" content="1" />
@@ -89,7 +129,7 @@
     <meta name="text:Instagram ID" content="" />
     <meta name="text:Instagram User ID" content="" />
     <meta name="text:Instagram Access Token" content="" />
-    <meta name="text:Instagram Feed Limit" content="" />
+    <meta name="text:Instagram Feed Limit" content="2" />
     <meta name="text:Website URL" content="" />
     <meta name="text:Website Name" content="" />
     <meta name="text:Disqus Shortname" content="" />
@@ -122,14 +162,17 @@
     {/block:Hide}
     <style type="text/css">
       html,body,button,input,select,textarea  {
-      font-family:{font:Body};
-      }
-      #title {
-      font-family:{font:Title};
+      font-family:{select:font Body};
+      }{block:IfNotUseTitleImage}
+      h1#title a {
+      font-family:'{select:font Title}',cursive;
+      color:{color:Header Title};
+      text-shadow:2px 2px 3px {color:Header Shadow};
       }
       #description {
-      font-family:{font:Desc};
-      }
+      font-family:'{select:font Desc}',cursive;
+      top:{select:Desc Spacing};
+      }{/block:IfNotUseTitleImage}
       body,div#streampadDrawerLeft{{block:IfUseBgImage}
       background-image:url('{block:IfBackgroundImage}{image:Background}{/block:IfBackgroundImage}{block:IfNotBackgroundImage}//static.tumblr.com/00f6300bdaa5567ed7a1cb4ad7177df9/tekiskr/OWfn1bi4d/tumblr_static_bg.png{/block:IfNotBackgroundImage}') !important;
       background-repeat:repeat !important;{/block:IfUseBgImage}{block:IfNotUseBgImage}
@@ -137,9 +180,10 @@
       word-wrap:break-word !important;{/block:IfNotUseBgImage}
       }{block:ifShowHeader}
       {block:ifNotUseHeaderSlide}#cover{/block:ifNotUseHeaderSlide}{block:ifUseHeaderSlide}.no-js #cover{/block:ifUseHeaderSlide} {
-      background-image:url('{block:IfNotHeader1Image}//static.tumblr.com/6c4413b1c4bca9a61673977731f0fc90/tekiskr/vtkmwiii6/tumblr_static_a.jpg{/block:IfNotHeader1Image}{block:IfHeader1Image}{image:Header1}{/block:IfHeader1Image}');
+      background-image:url('{block:IfNotHeader1Image}//static.tumblr.com/06d03694f2b9d08043ee0a936e6e3421/tekiskr/UoGn3itz8/tumblr_static_a.jpg{/block:IfNotHeader1Image}{block:IfHeader1Image}{image:Header1}{/block:IfHeader1Image}');
       background-repeat:no-repeat;
       background-position:center center;{block:ifNotUseHeaderSlide}
+      padding:83px 0 !important;
       background-size:100% 100%;{/block:ifNotUseHeaderSlide}
       }{/block:ifShowHeader}{block:ifNotShowHeader}
       iframe#tumblr_controls {
@@ -149,7 +193,7 @@
       #cover,#cover a,.grid article.type-quote header p,.index-page .grid article.minimal.type-photo footer .post-meta .meta-links a,.index-page .grid article.minimal.type-photoset footer .post-meta .meta-links a,.index-page .grid article.minimal.type-video footer .post-meta .meta-links a,.index-page .grid article.minimal.type-audio footer .post-meta .meta-links a,.grid article.type-link header h2 a,.grid article footer .tags ul li a.tag,.more_notes_link_container a,.dropdown-left,#main .grid a.prev .prev-inner,#main .grid a.next .next-inner,.grid article footer .share-links .share-close i,.grid article footer #notes ul li a.notice,.dropdown-left>li>a,article.type-text header h2,div#streampadPlayerClickToPlay,#main > footer nav a:hover.dc,#dream {
       color:{color:1st Color};
       }
-      .navbar-inverse .nav-collapse .dropdown-menu a:hover,.notes_loading,.more_notes_link_container a:hover,.dropdown-menu>li>a:hover,.dropdown-left>li>a:hover,.grid article.type-ask .question,#main>footer nav p a:hover,#main>footer nav#pagination ul li a.prev:hover,#main>footer nav#pagination ul li a.next:hover {
+      .navbar-inverse .nav-collapse .dropdown-menu a:hover,.notes_loading,.more_notes_link_container a:hover,.dropdown-menu>li>a:hover,.dropdown-left>li>a:hover,.grid article.type-ask .question,#main>footer nav p a:hover,#main>footer nav#pagination ul li a.prev:hover,#main>footer nav#pagination ul li a.next:hover,.answer-post a:hover {
       color:{color:2nd Color};
       }
       .grid article footer .post-meta .meta-links i,#main>footer nav a.dc,.dropdown-menu>li>a,div.answer-post p,#scrollUp,.navbar .nav > li > a,.navbar-inverse .nav-collapse .nav > li > a,.navbar-inverse .nav-collapse .dropdown-menu a,.details,div.kiri,div.kanan,div.kiri a,div.kanan a,.dropdown-left > li > a.date,div.space span,div.dropdown a {
@@ -167,11 +211,8 @@
       a,ol.notes li.note a,section a {
       color:{color:5th Color};
       }
-      a:hover,a:focus,ol.notes li.note a:hover,section a:hover,a:hover,li.like_post .post_info_bottom span.via,.grid article.type-chat section p.even {
+      a:hover,a:focus,ol.notes li.note a:hover,section a:hover,a:hover,li.like_post .post_info_bottom span.via,.grid article.type-chat section p.even,.answer-post a {
       color:{color:6th Color};
-      }
-      div.dropdown a:hover,div.kanan a:hover {
-      color:{color:6th Color} !important;
       }
       #streampadPlaylistItems div div {
       color:{color:9th Bgcolor} !important;
@@ -193,7 +234,7 @@
       .dropdown-menu,.dropdown-menu>li>a:hover.tweet,li.like_post .post_info_bottom a:hover {
       background:{color:9th Bgcolor} !important
       } 
-      .grid article,.index-page .grid article.minimal footer .share-links,div.nav-menu,div#tweets,img.f-avatar,div#notes,div.disquss-thread,.album-case,.grid article.type-photoset .photoset-grid {{block:IfUseSectionImage}
+      .grid article,.index-page .grid article.minimal footer .share-links,div.nav-menu,div#tweets,img.f-avatar,div#notes,div.disquss-thread,.album-case {{block:IfUseSectionImage}
       background-image:url('{block:IFSectionImage}{image:Section}{/block:IFSectionImage}{block:IFNotSectionImage}data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIBAMAAAA2IaO4AAAAFVBMVEXv7u/f3d/n5uff3N/w7/Dv7e/w7vA7L+vAAAAAIklEQVQImWNgEARCBiUgNHQQdAAzGAIgYglKDIIOgglgMQA+hAOJkNC02QAAAABJRU5ErkJggg=={/block:IFNotSectionImage}');
       background-repeat:repeat;{/block:IfUseSectionImage}{block:IfNotUseSectionImage}
       background:{color:2nd Bgcolor};
@@ -220,7 +261,7 @@
       .grid article.post header {
       background:{color:6th Bgcolor};  
       }
-      div.answers img,.label,.badge {
+      div.answers img,.label,.badge,.grid article.type-photoset .photoset-grid  {
       background:{color:7th Bgcolor};
       }
       #streampadDrawerTop {
@@ -256,7 +297,7 @@
       border-color:{color:1st Bgcolor};
       }
       .dropdown-menu div.nav-menu a,div.content {
-      border-bottom:1px dotted {color:5th Color};
+      border-bottom:1px dotted {color:6th Color};
       }
       .dropdown-menu h4,.dropdown-menu>li>h4 {
       border-top:1px solid {color:3rd Bgcolor};
@@ -269,10 +310,14 @@
       border-right:7.5px solid {color:1st Bgcolor};
       }
       .dropdown-left {
+      background:{color:3rd Bgcolor};
       border:1px solid {color:3rd Color};
       }
+      .dropdown-left:after {
+      border-bottom:6px solid {color:3rd Color} !important
+      }
       blockquote {
-      border-left:1px solid {color:7th Color} !important;
+      border-left:1px solid {color:6th Color} !important;
       }
       div.segitiga {
       border-top:6px solid {color:1st Bgcolor};
@@ -299,10 +344,7 @@
       .navbar-inverse .nav-collapse .navbar-form,.navbar-inverse .nav-collapse .navbar-search {
       border-top-color:{color:9th Color} !important;
       border-bottom-color:{color:9th Color} !important;
-      }{block:IfNotUsePhotosetPadding}
-      .grid article.type-photoset .photoset-grid .photoset-row {
-      margin:0 !important;
-      }{/block:IfNotUsePhotosetPadding}
+      }
       {CustomCSS}
     </style>
     <!--[if gte IE 9]>
@@ -312,40 +354,41 @@
       }
     </style>
     <![endif]-->
-    <meta property="og:title" content="{Title}{block:PostSummary} &#124; {PostSummary}{/block:PostSummary}{block:SearchPage} &#124; Search results for {SearchQuery}{/block:SearchPage}" />
+    <meta property="og:title" content="{Title}{block:IndexPage} &#124; {lang:Home}{/block:IndexPage}{block:PostSummary} &#124; {PostSummary}{/block:PostSummary}{block:SearchPage} &#124; {SearchQuery}{/block:SearchPage}" />
     <meta property="og:description" content="{block:IndexPage}{block:Description}{MetaDescription}{/block:Description}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}" />
     <meta property="og:type" content="{block:IndexPage}blog{/block:IndexPage}{block:PermalinkPage}{block:Posts}{PostType}{/block:Posts}{/block:PermalinkPage}" />
     <meta property="og:url" content="{block:IndexPage}{BlogURL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
     <meta property="og:site_name" content="{Title}" />
     <meta property="og:image" content="{PortraitURL-48}" />
-    <script src="//static.tumblr.com/tekiskr/bK7n1y61u/modernizr.min.js"></script>
+    <script src="//static.tumblr.com/tekiskr/sAGn3ihs6/modernizr.min.js"></script>
   </head>
-<body>{block:IfShowHeader}
-<header id="cover">
-<div class="container">{block:IfShowTitleAndDesc}
+<body>
+ {block:IfShowHeader} <header id="cover">
+<div class="container">
+	 {block:IfShowTitleAndDesc}
 	<h1 id="title" class="{block:IfNotUseTitleImage}text-title{/block:IfNotUseTitleImage}{block:IfUseTitleImage}logo-title{/block:IfUseTitleImage}">
 	{block:IfHeadTitle}{block:IfNotUseTitleImage} <a href="{BlogURL}" title="{Title}">
 	{text:Head Title} </a>
 	{/block:IfNotUseTitleImage}{/block:IfHeadTitle}{block:IfNotHeadTitle}{block:IfNotUseTitleImage} <a href="{BlogURL}" title="{Title}">
 	{Title} </a>
 	{/block:IfNotUseTitleImage}{/block:IfNotHeadTitle}{block:IfUseTitleImage}{block:IfNotUseTitleSlide} <a href="{BlogURL}" title="{Title}">
-	<img src="{image:TitleImage1}" alt="{text:Head Title}" width="287" height="92" />
+	<img src="{image:TitleImage1}" alt="{text:Head Title}" width="287" height="92"/>
 	</a>
 	{/block:IfNotUseTitleSlide}{block:IfUseTitleSlide}
 	<ul class="dinata">
 		<li>
 		<a href="{BlogURL}" title="{Title}">
-		<img src="{image:TitleImage1}" alt="{text:Head Title}" width="287" height="92" />
+		<img src="{image:TitleImage1}" alt="{text:Head Title}" width="287" height="92"/>
 		</a>
 		</li>
 		<li class="logo">
 		<a href="{BlogURL}" title="{Title}">
-		<img src="{image:TitleImage2}" alt="{text:Head Title}" width="287" height="92" />
+		<img src="{image:TitleImage2}" alt="{text:Head Title}" width="287" height="92"/>
 		</a>
 		</li>
 		<li class="logo">
 		<a href="{BlogURL}" title="{Title}">
-		<img src="{image:TitleImage3}" alt="{text:Head Title}" width="287" height="92" />
+		<img src="{image:TitleImage3}" alt="{text:Head Title}" width="287" height="92"/>
 		</a>
 		</li>
 	</ul>
@@ -360,8 +403,8 @@
 	</p>
 	 {/block:IfHeadDesc}{/block:IfNotUseTitleImage}{/block:IfShowTitleAndDesc}
 </div>
-</header>{/block:IfShowHeader}
-<nav class="navbar navbar-inverse navbar-static-top">
+</header>
+{/block:IfShowHeader} <nav class="navbar navbar-inverse navbar-static-top">
 <div class="navbar-inner">
 	<div class="container">
 		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -374,9 +417,11 @@
 		</a>
 		<div class="nav-collapse collapse">
 			<form action="/search" class="navbar-search pull-right" method="get">
+				<span{block:ifusedynamicnav} class="small medium" {/block:ifusedynamicnav}>
 				<input type="text" name="q" class="search-query" value="{SearchQuery}" autocomplete="off">
 				<i class="icon icon-search">
 				</i>
+				</span>
 			</form>
 			 {block:IfNotUseMinimalNav}
 			<ul class="nav">
@@ -397,7 +442,7 @@
 						</i>
 						{lang:Home} </a>
 						</li>
-						<li>
+						<li{block:ifusedynamicnav} class="small medium" {/block:ifusedynamicnav}>
 						<a target="_blank" class="random" href="/random" title="{lang:Random post}">
 						<i class="icon-random">
 						</i>
@@ -429,8 +474,7 @@
 						</i>
 						{SubmitLabel} </a>
 						</li>
-						 {/block:SubmissionsEnabled}{block:IfShowPhotoSlideshow}
-						<li>
+						 {/block:SubmissionsEnabled}{block:IfShowPhotoSlideshow} <li{block:ifusedynamicnav} class="small medium" {/block:ifusedynamicnav}>
 						<a class="dance" href="{block:If1stSlideLoadingImage}{image:1stSlideLoading}{/block:If1stSlideLoadingImage}{block:IfNot1stSlideLoadingImage}//static.tumblr.com/b5d97f1c29140b44d023b87ce17acdcd/tekiskr/QOgmvel6g/tumblr_static_loading.gif{/block:IfNot1stSlideLoadingImage}" title="{lang:See more}">
 						<i class="icon-youtube-play">
 						</i>
@@ -483,7 +527,7 @@
 						 {block:Following}
 						<div class="following-content">
 							 {block:Followed} <a target="_blank" href="{FollowedURL}" title="{FollowedName}">
-							<img class="f-avatar" src="{FollowedPortraitURL-48}" width="48" height="48" alt="{FollowedName}" />
+							<img class="f-avatar" src="{FollowedPortraitURL-48}" width="48" height="48" alt="{FollowedName}"/>
 							</a>
 							{/block:Followed}
 						</div>
@@ -506,9 +550,8 @@
 					<li>
 					<h4 class="like">
 					{lang:Stuff I like} </h4>
-					<div class="likes">{block:IfUse2ContentLikes}
-						 {Likes limit="2" summarize="100" width="150"}{/block:IfUse2ContentLikes}{block:IfNotUse2ContentLikes}
-						 {Likes limit="4" summarize="100" width="150"}{/block:IfNotUse2ContentLikes}
+					<div class="likes">
+						 {block:IfUse2ContentLikes} {Likes limit="2" summarize="100" width="150"}{/block:IfUse2ContentLikes}{block:IfNotUse2ContentLikes} {Likes limit="4" summarize="100" width="150"}{/block:IfNotUse2ContentLikes}
 					</div>
 					<a class="tweet" target="_blank" href="//www.tumblr.com/liked/by/{Name}" title="{lang:See more stuff I like}">
 					{lang:More} <i class="icon-circle-arrow-right">
@@ -545,7 +588,7 @@
 				 {/block:IfShowInstagram}{/block:IfInstagramID}{block:IfTwitterID}{block:IfShowTweets}
 				<li class="icon divider-vertical">
 				</li>
-				<li class="icon dropdown">
+				<li class="icon dropdown{block:IfUseDynamicNav} small{/block:IfUseDynamicNav}">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{lang:Latest Tweets}">
 				<i class="icon icon-twitter">
 				</i>
@@ -568,7 +611,7 @@
 				 {/block:IfShowTweets}{/block:IfTwitterID}{block:IfShowSocial}
 				<li class="icon divider-vertical">
 				</li>
-				<li class="icon dropdown">
+				<li class="icon dropdown{block:IfUseDynamicNav} small medium{/block:IfUseDynamicNav}">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Me, Elsewhere">
 				<i class="icon icon-pushpin">
 				</i>
@@ -642,7 +685,7 @@
 				 {/block:IfShowSocial}{block:IfShowLinks}{block:IfLinkTitle}
 				<li class="icon divider-vertical">
 				</li>
-				<li class="icon dropdown">
+				<li class="icon dropdown{block:IfUseDynamicNav} small medium{/block:IfUseDynamicNav}">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{text:Link Title}">
 				<i class="icon icon-bookmark-empty">
 				</i>
@@ -695,7 +738,7 @@
 				 {/block:IfLinkTitle}{/block:IfShowLinks}{block:IfAbout}{block:IfShowAbout}
 				<li class="icon divider-vertical">
 				</li>
-				<li class="icon dropdown">
+				<li class="icon dropdown{block:IfUseDynamicNav} small{/block:IfUseDynamicNav}">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{lang:About me}">
 				<i class="icon icon-file-text-alt">
 				</i>
@@ -708,7 +751,7 @@
 					{lang:About me} </h4>
 					<div id="tweets" class="abouts">
 						<p align="center">
-							<img class="about" src="{block:IfAboutsImage}{image:Abouts}{/block:IfAboutsImage}{block:IfNotAboutsImage}{PortraitURL-48}{/block:IfNotAboutsImage}" width="48" height="48" alt="{title}" />
+							<img class="about" src="{block:IfAboutsImage}{image:Abouts}{/block:IfAboutsImage}{block:IfNotAboutsImage}{PortraitURL-48}{/block:IfNotAboutsImage}" width="48" height="48" alt="{title}"/>
 						</p>
 						 {text:About}
 					</div>
@@ -730,7 +773,7 @@
 				 {block:IfShowPages}{block:HasPages}
 				<li class="icon divider-vertical">
 				</li>
-				<li class="icon dropdown">
+				<li class="icon dropdown{block:IfUseDynamicNav} small medium{/block:IfUseDynamicNav}">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Sub {lang:Navigate}">
 				<i class="icon icon-plus-sign">
 				</i>
@@ -755,7 +798,7 @@
 				 {/block:HasPages}{/block:IfShowPages}
 				<li class="icon divider-vertical">
 				</li>
-				<li>
+				<li{block:ifusedynamicnav} class="small" {/block:ifusedynamicnav}>
 				<a target="_blank" class="random" href="/random" title="{lang:Random post}">
 				<i class="icon-random">
 				</i>
@@ -808,7 +851,7 @@
 				 {/block:SubmissionsEnabled}{block:IfShowPhotoSlideshow}
 				<li class="icon divider-vertical">
 				</li>
-				<li>
+				<li{block:ifusedynamicnav} class="small medium" {/block:ifusedynamicnav}>
 				<a class="dance" href="{block:If1stSlideLoadingImage}{image:1stSlideLoading}{/block:If1stSlideLoadingImage}{block:IfNot1stSlideLoadingImage}//static.tumblr.com/b5d97f1c29140b44d023b87ce17acdcd/tekiskr/QOgmvel6g/tumblr_static_loading.gif{/block:IfNot1stSlideLoadingImage}" title="{lang:See more}">
 				<i class="icon-youtube-play">
 				</i>
@@ -819,7 +862,7 @@
 				 {/block:IfShowPhotoSlideshow}{block:IfAbout}{block:IfShowAbout}
 				<li class="icon divider-vertical">
 				</li>
-				<li class="icon dropdown">
+				<li class="icon dropdown{block:IfUseDynamicNav} small{/block:IfUseDynamicNav}">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{lang:About me}">
 				<i class="icon icon-file-text-alt">
 				</i>
@@ -832,7 +875,7 @@
 					{lang:About me} </h4>
 					<div id="tweets" class="abouts">
 						<p align="center">
-							<img class="about" src="{block:IfAboutsImage}{image:Abouts}{/block:IfAboutsImage}{block:IfNotAboutsImage}{PortraitURL-48}{/block:IfNotAboutsImage}" width="48" height="48" alt="{title}" />
+							<img class="about" src="{block:IfAboutsImage}{image:Abouts}{/block:IfAboutsImage}{block:IfNotAboutsImage}{PortraitURL-48}{/block:IfNotAboutsImage}" width="48" height="48" alt="{title}"/>
 						</p>
 						 {text:About}
 					</div>
@@ -846,7 +889,13 @@
 	</div>
 </div>
 </nav>
-<!--[if lt IE 9]><div class="alert alert-block old-browser"><button type="button" class="close" data-dismiss="alert"><i class="icon icon-remove"></i></button><h4>Warning!</h4>You are using an <strong>outdated</strong>browser. Please <a href="//browsehappy.com/">upgrade your browser</a>or <a href="//www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>to improve your experience.</div><![endif]-->
+<!--[if lt IE 9]>
+    <div class="alert alert-block old-browser">
+      <button type="button" class="close" data-dismiss="alert"><i class="icon icon-remove"></i></button>
+      <h4>Warning!</h4>
+      You are using an <strong>outdated</strong>browser. Please <a href="//browsehappy.com/">upgrade your browser</a>or <a href="//www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>to improve your experience.
+    </div>
+    <![endif]-->
 <div class="alert alert-block alert-error js-info">
 	<h4>
 	Your JavaScript is disabled. </h4>
@@ -938,13 +987,13 @@
 			<div class="segitiga">
 			</div>
 			<p class="asker">
-				<img src="{AskerPortraitURL-48}" alt="Asker's Portrait" width="48" height="48" />
+				<img src="{AskerPortraitURL-30}" alt="Asker's Portrait" width="30" height="30"/>
 				{lang:Asked by Asker 2}
 			</p>
 			</header>
 			<section>
 			<div class="answers">
-				<img src="{PortraitURL-48}" alt="Answer" width="48" height="48" />
+				<img src="{PortraitURL-24}" alt="Answer" width="24" height="24"/>
 			</div>
 			<div class="arrow-right">
 			</div>
@@ -970,7 +1019,7 @@
 				 {AudioPlayerBlack}
 			</div>
 			<div class="album-case">
-				 {block:AlbumArt} <img src="{AlbumArtURL}" alt="{block:Artist}{Artist}{/block:Artist} - {block:TrackName}{TrackName}{/block:TrackName}" width="500" height="500" />
+				 {block:AlbumArt} <img src="{AlbumArtURL}" alt="{block:Artist}{Artist}{/block:Artist} - {block:TrackName}{TrackName}{/block:TrackName}" width="500" height="500"/>
 				<a class="dance" href="{AlbumArtURL}" title="{lang:See more}">
 				</a>
 				{/block:AlbumArt}
@@ -999,8 +1048,7 @@
 				 {Caption}
 			</div>
 			</section>
-			{/block:Caption}{/block:IfShowCaption}{/block:Audio}
-			{block:Video} <header>
+			{/block:Caption}{/block:IfShowCaption}{/block:Audio}{block:Video} <header>
 			<div class="video-wrapper">
 				 {block:IndexPage}{Video-250}{/block:IndexPage}{block:PermalinkPage}
 				<div class="video-case" align="center">
@@ -1075,9 +1123,8 @@
 						{/block:ifNotShowDisqus}{/block:PermalinkPage}
 					</div>
 					<div class="note-count">
-					     <span title="{lang:Likes}">
-						 {block:IfWhiteLikeButton} {LikeButton size="13" color="white"} {/block:IfWhiteLikeButton} {block:IfNotWhiteLikeButton} {LikeButton size="13"} {/block:IfNotWhiteLikeButton}
-						 </span>
+						<span title="{lang:Likes}">
+						{block:IfWhiteLikeButton} {LikeButton size="13" color="white"} {/block:IfWhiteLikeButton} {block:IfNotWhiteLikeButton} {LikeButton size="13"} {/block:IfNotWhiteLikeButton} </span>
 					</div>
 					<div class="reblog">
 						<a href="{ReblogURL}" title="{lang:Reblogged}">
@@ -1216,47 +1263,49 @@
 	 {/block:IndexPage} </nav>
 	</footer>
 </div>
-  <script src="//static.tumblr.com/tekiskr/Iagn1y5uq/jquery.min.js"></script>
-  <script>
-    window.jQuery || document.write('<script src="//static.tumblr.com/tekiskr/Iagn1y5uq/jquery.min.js"><\/script>')
-  </script>
-  <script>{block:ifShowHeader}{block:ifUseHeaderSlide}
-    var image1 = '{block:IfHeader1Image}{image:Header1}{/block:IfHeader1Image}{block:IfNotHeader1Image}//static.tumblr.com/6c4413b1c4bca9a61673977731f0fc90/tekiskr/vtkmwiii6/tumblr_static_a.jpg{/block:IfNotHeader1Image}';
-    var image2 = '{block:IfHeader2Image}{image:Header2}{/block:IfHeader2Image}{block:IfNotHeader2Image}//static.tumblr.com/3d063c95edf70eb2a1e3e68b04a40136/tekiskr/iLamwiiid/tumblr_static_b.jpg{/block:IfNotHeader2Image}';
-    var image3 = '{block:IfHeader3Image}{image:Header3}{/block:IfHeader3Image}{block:IfNotHeader3Image}//static.tumblr.com/8e82161c0841d1abca12df37b4a3e72a/tekiskr/Uiomwiiio/tumblr_static_c.jpg{/block:IfNotHeader3Image}';{/block:ifUseHeaderSlide}{/block:ifShowHeader}{block:SearchPage}
-    var c = true;{/block:SearchPage}{block:IfNotUseMinimalNav}{block:IfTwitterID}{block:IfShowTweets}
-    var twitterID = "{text:Twitter ID}";{/block:IfShowTweets}{/block:IfTwitterID}{block:IfInstagramAccessToken}{block:IfShowInstagram}
-    var userId = '{text:Instagram User ID}';
-    var accessToken = '{text:Instagram Access Token}';
-    var instaCount = '{text:Instagram Feed Limit}';{/block:IfShowInstagram}{/block:IfInstagramAccessToken}{/block:IfNotUseMinimalNav}{block:PermalinkPagination}{block:ifDisqusShortname}{block:ifShowDisqus}
-    var disqus_shortname = '{text:Disqus Shortname}';{/block:ifShowDisqus}{/block:ifDisqusShortname}{/block:PermalinkPagination}
-    (function (f, a) {
-            var e, b = f.getElementsByTagName(a)[0],
-                d = f.createDocumentFragment(),
-                c = function (g, h) {
-                    if (f.getElementById(h)) {
-                        return
-                    }
-                    e = f.createElement(a);
-                    e.src = g;
-                    e.async = true;
-                    h && (e.id = h);
-                    d.appendChild(e)
-                };
-        c('//static.tumblr.com/tekiskr/zZQn2o1m9/plugin.min.js');{block:ifShowHeader}{block:ifUseHeaderSlide}
-        c('//static.tumblr.com/tekiskr/Xnzn1y5x0/backstretch.min.js');{/block:ifUseHeaderSlide}{/block:ifShowHeader}{block:IfShowMusicPlayer}
-        c('//static.tumblr.com/tekiskr/XzEn1y5y8/audio.min.js');{/block:IfShowMusicPlayer}{block:IfUseDynamicNav}
-        c('//static.tumblr.com/tekiskr/AD6n3d25g/fixed.min.js');{/block:IfUseDynamicNav}{block:IfNotUseMinimalNav}{block:IfInstagramAccessToken}{block:IfShowInstagram}
-        c('//static.tumblr.com/tekiskr/8M3n1y5za/insta.min.js');{/block:IfShowInstagram}{/block:IfInstagramAccessToken}{block:IfTwitterID}{block:IfShowTweets}
-        c('//static.tumblr.com/tekiskr/NdWn1y600/twitter.min.js');
-        c('/tweets.js');{/block:IfShowTweets}{/block:IfTwitterID}{/block:IfNotUseMinimalNav}{block:PermalinkPagination}{block:ifDisqusShortname}{block:ifShowDisqus}
-        c('//go.disqus.com/embed.js');{/block:ifShowDisqus}{/block:ifDisqusShortname}{/block:PermalinkPagination}{block:IfGoogleAnalyticsID}{block:ifShowAnalytics}
-        c('//www.google-analytics.com/ga.js', 'ga');{/block:ifShowAnalytics}{/block:IfGoogleAnalyticsID}
-        b.parentNode.insertBefore(d, b)
-    }(document, "script"));{block:IfGoogleAnalyticsID}{block:ifShowAnalytics}
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
-    _gaq.push(['_trackPageview']);{/block:ifShowAnalytics}{/block:IfGoogleAnalyticsID}
-  </script>
-</body>
+    <script src="//static.tumblr.com/tekiskr/4vqn3ihty/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="//static.tumblr.com/tekiskr/4vqn3ihty/jquery.min.js"><\/script>')
+    </script>
+    <script>{block:ifShowHeader}{block:ifUseHeaderSlide}
+      var image1 = '{block:IfHeader1Image}{image:Header1}{/block:IfHeader1Image}{block:IfNotHeader1Image}//static.tumblr.com/06d03694f2b9d08043ee0a936e6e3421/tekiskr/UoGn3itz8/tumblr_static_a.jpg{/block:IfNotHeader1Image}';
+      var image2 = '{block:IfHeader2Image}{image:Header2}{/block:IfHeader2Image}{block:IfNotHeader2Image}//static.tumblr.com/c3aac2fb5d373479b8c239eeb1107182/tekiskr/msen3itzg/tumblr_static_b.jpg{/block:IfNotHeader2Image}';
+      var image3 = '{block:IfHeader3Image}{image:Header3}{/block:IfHeader3Image}{block:IfNotHeader3Image}//static.tumblr.com/8e82161c0841d1abca12df37b4a3e72a/tekiskr/Uiomwiiio/tumblr_static_c.jpg{/block:IfNotHeader3Image}';{/block:ifUseHeaderSlide}{/block:ifShowHeader}{block:SearchPage}
+      var c = true;{/block:SearchPage}
+      var spaces = '{select:Photoset Padding}';{block:IfShowMusicPlayer}
+      var copyrights = 'Copyright  © {CopyrightYears} {name}. All rights reserved.';{/block:IfShowMusicPlayer}{block:IfNotUseMinimalNav}{block:IfTwitterID}{block:IfShowTweets}
+      var twitterID = "{text:Twitter ID}";{/block:IfShowTweets}{/block:IfTwitterID}{block:IfInstagramAccessToken}{block:IfShowInstagram}
+      var userId = '{text:Instagram User ID}';
+      var accessToken = '{text:Instagram Access Token}';
+      var instaCount = '{text:Instagram Feed Limit}';{/block:IfShowInstagram}{/block:IfInstagramAccessToken}{/block:IfNotUseMinimalNav}{block:PermalinkPagination}{block:ifDisqusShortname}{block:ifShowDisqus}
+      var disqus_shortname = '{text:Disqus Shortname}';{/block:ifShowDisqus}{/block:ifDisqusShortname}{/block:PermalinkPagination}
+      (function (f, a) {
+              var e, b = f.getElementsByTagName(a)[0],
+                  d = f.createDocumentFragment(),
+                  c = function (g, h) {
+                      if (f.getElementById(h)) {
+                          return
+                      }
+                      e = f.createElement(a);
+                      e.src = g;
+                      e.async = true;
+                      h && (e.id = h);
+                      d.appendChild(e)
+                  };
+          c('//static.tumblr.com/tekiskr/bBQn3ihvs/plugin.min.js');{block:ifShowHeader}{block:ifUseHeaderSlide}
+          c('//static.tumblr.com/tekiskr/4jSn3ihwk/backstretch.min.js');{/block:ifUseHeaderSlide}{/block:ifShowHeader}{block:IfShowMusicPlayer}
+          c('//static.tumblr.com/tekiskr/lEdn3ie0a/audio.min.js');{/block:IfShowMusicPlayer}{block:IfUseDynamicNav}
+          c('//static.tumblr.com/tekiskr/suYn3ihxj/fixed.min.js');{/block:IfUseDynamicNav}{block:IfNotUseMinimalNav}{block:IfInstagramAccessToken}{block:IfShowInstagram}
+          c('//static.tumblr.com/tekiskr/BwFn3ihy9/insta.min.js');{/block:IfShowInstagram}{/block:IfInstagramAccessToken}{block:IfTwitterID}{block:IfShowTweets}
+          c('//static.tumblr.com/tekiskr/9Xhn3ihz2/twitter.min.js');
+          c('/tweets.js');{/block:IfShowTweets}{/block:IfTwitterID}{/block:IfNotUseMinimalNav}{block:PermalinkPagination}{block:ifDisqusShortname}{block:ifShowDisqus}
+          c('//go.disqus.com/embed.js');{/block:ifShowDisqus}{/block:ifDisqusShortname}{/block:PermalinkPagination}{block:IfGoogleAnalyticsID}{block:ifShowAnalytics}
+          c('//www.google-analytics.com/ga.js', 'ga');{/block:ifShowAnalytics}{/block:IfGoogleAnalyticsID}
+          b.parentNode.insertBefore(d, b)
+      }(document, "script"));{block:IfGoogleAnalyticsID}{block:ifShowAnalytics}
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+      _gaq.push(['_trackPageview']);{/block:ifShowAnalytics}{/block:IfGoogleAnalyticsID}
+    </script>
+  </body>
 </html>
