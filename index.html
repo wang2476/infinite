@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" href="{PortraitURL-128}" />
     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
     <link rel="canonical" href="{block:IndexPage}{BlogURL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
-    <link rel="stylesheet" href="//static.tumblr.com/tekiskr/CZFn3ljfw/style.min.css" />{block:IfNotUseTitleImage}
+    <link rel="stylesheet" href="//static.tumblr.com/tekiskr/aPBn3lufl/style.min.css" />{block:IfNotUseTitleImage}
     <link href='//fonts.googleapis.com/css?family={select:Font Title}|{select:Font Desc}' rel='stylesheet' type='text/css'>{/block:IfNotUseTitleImage}
     <!--[if IE 7]>
     <link rel="stylesheet" href="//static.tumblr.com/tekiskr/5hcn3ihpe/font-awesome-ie7.min.css">
@@ -201,7 +201,7 @@
       .navbar-inverse .nav-collapse .dropdown-menu a:hover,.notes_loading,.more_notes_link_container a:hover,.dropdown-menu>li>a:hover,.dropdown-left>li>a:hover,.grid article.type-ask .question,#main>footer nav p a:hover,#main>footer nav#pagination ul li a.prev:hover,#main>footer nav#pagination ul li a.next:hover,.answer-post a:hover {
       color:{color:2nd Color};
       }
-      .grid article footer .post-meta .meta-links i,#main>footer nav a.dc,.dropdown-menu>li>a,div.answer-post p,#scrollUp,.navbar .nav > li > a,.navbar-inverse .nav-collapse .nav > li > a,.navbar-inverse .nav-collapse .dropdown-menu a,.details,div.kiri,div.kanan,div.kiri a,div.kanan a,.dropdown-left > li > a.date,div.space span,.grid article.type-chat section p.even,div.dropdown a {
+      .grid article footer .post-meta .meta-links i,#main>footer nav a.dc,.dropdown-menu>li>a,div.answer-post div,#scrollUp,.navbar .nav > li > a,.navbar-inverse .nav-collapse .nav > li > a,.navbar-inverse .nav-collapse .dropdown-menu a,.details,div.kiri,div.kanan,div.kiri a,div.kanan a,.dropdown-left > li > a.date,div.space span,.grid article.type-chat section p.even,div.dropdown a,div.answer-post p.read_more_container {
       color:{color:3rd Color};
       }
       .dropdown-menu h4,.dropdown-menu>li>h4,.grid article.type-ask p.question,.dropdown-menu>li>a:hover.tweet,.dropdown-menu div.nav-menu a:hover,div.content:hover,div.kiri a:hover,div.kanan a:hover,li.like_post .post_info_bottom a,a.tweet {
@@ -228,7 +228,7 @@
       div#streampadPlaylistHeader,#streampadDrawerLeft div,#streampadPlaylistItems div div:hover {
       color:{color:8th Color} !important;
       }
-      .grid article footer .post-meta .meta-links,#main .grid a.prev .prev-inner,#main .grid a.next .next-inner,.grid article.type-quote header,.grid article.type-link header h2 a,.more_notes_link_container a,.notes_loading,#infinite .loading-spinner .ui-spinner .side .fill,#main>footer nav,.grid article footer .share-links .share-close a,.details,.audio-left,.audio-right,div.answer-post p,#scrollUp,.grid article footer #notes ul li a.notice,.grid article.type-ask p.question,#main .grid a.prev:hover .prev-inner,#main .grid a.next:hover .next-inner,.grid article.type-link header h2 a:hover,.grid article footer .tags ul li a.tag,.grid article footer .tags ul li a.tag:hover,.notes_loading,.more_notes_link_container a:hover,.dropdown-left>li>a:hover {
+      .grid article footer .post-meta .meta-links,#main .grid a.prev .prev-inner,#main .grid a.next .next-inner,.grid article.type-quote header,.grid article.type-link header h2 a,.more_notes_link_container a,.notes_loading,#infinite .loading-spinner .ui-spinner .side .fill,#main>footer nav,.grid article footer .share-links .share-close a,.details,.audio-left,.audio-right,div.answer-post div,#scrollUp,.grid article footer #notes ul li a.notice,.grid article.type-ask p.question,#main .grid a.prev:hover .prev-inner,#main .grid a.next:hover .next-inner,.grid article.type-link header h2 a:hover,.grid article footer .tags ul li a.tag,.grid article footer .tags ul li a.tag:hover,.notes_loading,.more_notes_link_container a:hover,.dropdown-left>li>a:hover,div.answer-post p.read_more_container {
       background:{color:1st Bgcolor};
       }
       .navbar-inverse .navbar-inner,div#streampadBottomBar,.turun {
@@ -1003,7 +1003,9 @@
 			<div class="arrow-right">
 			</div>
 			<div class="answer-post">
+			   <div>
 				 {Answer}
+			   </div>
 			</div>
 			</section>
 			{/block:Answer}{block:Chat}{block:Title} <header>
