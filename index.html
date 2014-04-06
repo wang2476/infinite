@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" href="{PortraitURL-128}" />
     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
     <link rel="canonical" href="{block:IndexPage}{BlogURL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
-    <link rel="stylesheet" href="//static.tumblr.com/tekiskr/bukn3j1oa/style.min.css" />{block:IfNotUseTitleImage}
+    <link rel="stylesheet" href="//static.tumblr.com/tekiskr/CZFn3ljfw/style.min.css" />{block:IfNotUseTitleImage}
     <link href='//fonts.googleapis.com/css?family={select:Font Title}|{select:Font Desc}' rel='stylesheet' type='text/css'>{/block:IfNotUseTitleImage}
     <!--[if IE 7]>
     <link rel="stylesheet" href="//static.tumblr.com/tekiskr/5hcn3ihpe/font-awesome-ie7.min.css">
@@ -100,6 +100,7 @@
     <meta name="if:Use Dynamic Nav" content="1" />
     <meta name="if:Use Title Slide" content="0" />
     <meta name="if:Use 2 Content Likes" content="1" />
+    <meta name="if:Use Photo Post Opacity" content="0" />
     <meta name="select:Photoset Padding" content="1px" Title="Small" />
     <meta name="select:Photoset Padding" content="3px" Title="Medium" />
     <meta name="select:Photoset Padding" content="5px" Title="Large" />
@@ -190,14 +191,17 @@
       iframe#tumblr_controls {
       position:fixed !important;
       top:96% !important;
-      }{/block:ifNotShowHeader}
+      }{/block:ifNotShowHeader}{block:IfNotUsePhotoPostOpacity}
+      article.type-photo header img, article.type-photoset img, article.type-text img {
+      opacity:1 !important;
+      }{/block:IfNotUsePhotoPostOpacity}
       #cover,#cover a,.grid article.type-quote header p,.index-page .grid article.minimal.type-photo footer .post-meta .meta-links a,.index-page .grid article.minimal.type-photoset footer .post-meta .meta-links a,.index-page .grid article.minimal.type-video footer .post-meta .meta-links a,.index-page .grid article.minimal.type-audio footer .post-meta .meta-links a,.grid article.type-link header h2 a,.grid article footer .tags ul li a.tag,.more_notes_link_container a,.dropdown-left,#main .grid a.prev .prev-inner,#main .grid a.next .next-inner,.grid article footer .share-links .share-close i,.grid article footer #notes ul li a.notice,.dropdown-left>li>a,article.type-text header h2,div#streampadPlayerClickToPlay,#main > footer nav a:hover.dc,#dream {
       color:{color:1st Color};
       }
       .navbar-inverse .nav-collapse .dropdown-menu a:hover,.notes_loading,.more_notes_link_container a:hover,.dropdown-menu>li>a:hover,.dropdown-left>li>a:hover,.grid article.type-ask .question,#main>footer nav p a:hover,#main>footer nav#pagination ul li a.prev:hover,#main>footer nav#pagination ul li a.next:hover,.answer-post a:hover {
       color:{color:2nd Color};
       }
-      .grid article footer .post-meta .meta-links i,#main>footer nav a.dc,.dropdown-menu>li>a,div.answer-post p,#scrollUp,.navbar .nav > li > a,.navbar-inverse .nav-collapse .nav > li > a,.navbar-inverse .nav-collapse .dropdown-menu a,.details,div.kiri,div.kanan,div.kiri a,div.kanan a,.dropdown-left > li > a.date,div.space span,div.dropdown a {
+      .grid article footer .post-meta .meta-links i,#main>footer nav a.dc,.dropdown-menu>li>a,div.answer-post p,#scrollUp,.navbar .nav > li > a,.navbar-inverse .nav-collapse .nav > li > a,.navbar-inverse .nav-collapse .dropdown-menu a,.details,div.kiri,div.kanan,div.kiri a,div.kanan a,.dropdown-left > li > a.date,div.space span,.grid article.type-chat section p.even,div.dropdown a {
       color:{color:3rd Color};
       }
       .dropdown-menu h4,.dropdown-menu>li>h4,.grid article.type-ask p.question,.dropdown-menu>li>a:hover.tweet,.dropdown-menu div.nav-menu a:hover,div.content:hover,div.kiri a:hover,div.kanan a:hover,li.like_post .post_info_bottom a,a.tweet {
@@ -212,7 +216,7 @@
       a,ol.notes li.note a,section a {
       color:{color:5th Color};
       }
-      a:hover,a:focus,ol.notes li.note a:hover,section a:hover,a:hover,li.like_post .post_info_bottom span.via,.grid article.type-chat section p.even,.answer-post a {
+      a:hover,a:focus,ol.notes li.note a:hover,section a:hover,a:hover,li.like_post .post_info_bottom span.via,.answer-post a {
       color:{color:6th Color};
       }
       #streampadPlaylistItems div div {
@@ -1172,7 +1176,7 @@
 						</a>
 					</div>
 					<div class="share-pinterest">
-						<a{block:photo} target="_blank" href="//pinterest.com/pin/create/button/?url={Permalink}&amp;media={PhotoURL-HighRes}" title="{lang:Share this} post to Pinterest" {/block:photo}>
+						<a{block:photo} target="_blank" href="//pinterest.com/pin/create/button/?url={Permalink}&amp;media={PhotoURL-HighRes}" title="{lang:Share this} post to Pinterest" {/block:photo}{block:photoset}{block:photos} target="_blank" href="//pinterest.com/pin/create/button/?url={Permalink}&amp;media={PhotoURL-HighRes}" title="{lang:Share this} post to Pinterest" {/block:photos}{/block:photoset}>
 						<i class="icon icon-pinterest">
 						</i>
 						</a>
