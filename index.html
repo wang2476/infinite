@@ -1178,7 +1178,7 @@
 						</a>
 					</div>
 					<div class="share-pinterest">
-						<a{block:photo} target="_blank" href="//pinterest.com/pin/create/button/?url={Permalink}&amp;media={PhotoURL-HighRes}" title="{lang:Share this} post to Pinterest" {/block:photo}{block:photoset}{block:photos} target="_blank" href="//pinterest.com/pin/create/button/?url={Permalink}&amp;media={PhotoURL-HighRes}" title="{lang:Share this} post to Pinterest" {/block:photos}{/block:photoset}>
+						<a{block:photo} target="_blank" href="//pinterest.com/pin/create/button/?url={Permalink}&amp;media={PhotoURL-HighRes}" title="{lang:Share this} post to Pinterest" {/block:photo}{block:photoset} target="_blank" href="//pinterest.com/pin/create/button/?url={Permalink}&amp;media={block:photos}{PhotoURL-HighRes};{/block:photos}" title="{lang:Share this} post to Pinterest"{/block:photoset}>
 						<i class="icon icon-pinterest">
 						</i>
 						</a>
